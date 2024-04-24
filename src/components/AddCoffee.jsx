@@ -14,7 +14,7 @@ const AddCoffee = () => {
         const newCoffee = { name, quantity, supplier, taste, category, details, photo }
 
 
-            fetch('http://localhost:5000/coffee', {
+        fetch('https://coffee-store-server-two-beta.vercel.app/coffee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -24,13 +24,13 @@ const AddCoffee = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Coffee Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                      })
+                    })
                 }
             })
 

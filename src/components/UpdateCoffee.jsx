@@ -15,10 +15,10 @@ const UpdateCoffee = () => {
         const details = form.details.value;
         const photo = form.photo.value;
 
-        const updatedCoffee = {_id, name, quantity, supplier, taste, category, details, photo }
+        const updatedCoffee = { _id, name, quantity, supplier, taste, category, details, photo }
 
 
-        fetch(`http://localhost:5000/coffee/${_id}`, {
+        fetch(`https://coffee-store-server-two-beta.vercel.app/coffee/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
